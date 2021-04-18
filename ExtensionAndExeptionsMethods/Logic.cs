@@ -6,6 +6,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
 {
     public class Logic
     {
+        //Clase Logic con metodos que producen excepciones en caso de ingresar un entero fuera del rango 1 al 12
         public static string CorroborarMes(int a)
             {
             switch (a)
@@ -38,6 +39,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
             throw new ArgumentOutOfRangeException();
         }
 
+        //Igual pero con Custom Exception
         public static string CorroborarMesCustom(int a)
         {
             switch (a)

@@ -9,6 +9,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions.Tests
     [TestClass()]
     public class LogicTests
     {
+        //Primera vez trabajando con Testing, no se como estara
         [TestMethod()]
         public void CorroborarMesTest_GetMonthRight()
         {

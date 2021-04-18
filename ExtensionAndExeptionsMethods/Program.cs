@@ -8,7 +8,7 @@ namespace ExtensionAndExceptionsMethods
     {
         static void Main(string[] args)
         {
-            // 
+            //inicio de variables para operaciones aritmeticas 
             int? dividendo = null;
             int? divisor = null;
 
@@ -50,10 +50,12 @@ namespace ExtensionAndExceptionsMethods
                             dividendo = Int32.Parse(Console.ReadLine());
                             Console.WriteLine("Ingrese el divisor:");
                             divisor = Int32.Parse(Console.ReadLine());
+                            //Metodo que genera una simple excepcion al intentar dividir por cero
                             Console.WriteLine(dividendo.DividirPor(divisor));
                         }
                         catch (FormatException ex)
                         {
+                            //En caso de que haya error en el input ingresado
                             Console.WriteLine("Ingreso un valor incorrecto, vuelva a intentar");
                             Console.WriteLine($"El tipo de Error es: {ex.GetType()}");
                             Console.WriteLine($"Mensaje de Error: {(ex.Message)}");
@@ -67,13 +69,16 @@ namespace ExtensionAndExceptionsMethods
                             dividendo = Int32.Parse(Console.ReadLine());
                             Console.WriteLine("Ingrese el divisor:");
                             divisor = Int32.Parse(Console.ReadLine());
+                            //Metodo que genera una excepcion particular al intentar dividir por cero
                             Console.WriteLine(dividendo.DividirALoNorris(divisor));
                         }
                         catch (FormatException ex)
                         {
+                            //En caso de que haya error en el input ingresado
                             Console.WriteLine("Seguro ingreso una letra o no ingreso nada!");
                             Console.WriteLine("Mensaje de Error: ");
                             Console.WriteLine(ex.Message);
+                            //Inclusion de StackTrace
                             Console.WriteLine("StackTrace: ");
                             Console.WriteLine(ex.StackTrace);
                         }
@@ -86,10 +91,12 @@ namespace ExtensionAndExceptionsMethods
                             Console.WriteLine("Ingrese un entero para saber a que mes del año corresponde.");
                             Console.WriteLine("En caso de que no corresponda se le informara con una Excepcion.");
                             int mes = Int32.Parse(Console.ReadLine());
+                            //Metodo de una clase Logic que dispara una excepcion cuando se introduce un entero fuera del rango del 1 al 12
                             Console.WriteLine(Logic.CorroborarMes(mes));
                         }
                         catch (Exception ex)
                         {
+                            //Excepcion en general para evitar la ruptura del programa
                             Console.WriteLine($"El tipo de Error es: {ex.GetType()}");
                             Console.WriteLine($"Mensaje de Error: {(ex.Message)}");
                         }
@@ -101,10 +108,12 @@ namespace ExtensionAndExceptionsMethods
                             Console.WriteLine("Ingrese un entero para saber a que mes del año corresponde.");
                             Console.WriteLine("En caso de que no corresponda se le informara con una Custom Exception.");
                             int mes = Int32.Parse(Console.ReadLine());
+                            //Metodo de una clase Logic que dispara una excepcion Custom cuando se introduce un entero fuera del rango del 1 al 12
                             Console.WriteLine(Logic.CorroborarMesCustom(mes));
                         }
                         catch (Exception ex)
                         {
+                            //Excepcion en general para evitar la ruptura del programa
                             Console.WriteLine($"El tipo de Error es: {ex.GetType()}");
                             Console.WriteLine($"Mensaje de Error: {(ex.Message)}");
                         }

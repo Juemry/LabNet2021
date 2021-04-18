@@ -6,7 +6,7 @@ namespace ExtensionAndExceptionsMethods.Extensions
 {
     public static class Extensions
     {
-
+        //Metodos de extension para dividir con excepcion en caso de dividir por cero
         public static string DividirPor(this int? dividendo, int? divisor)
         {
             int? resultado = null;
@@ -27,6 +27,7 @@ namespace ExtensionAndExceptionsMethods.Extensions
             return null;
         }
 
+        //Metodo de extension para dividir con exception cuando se divide por cero y respuesta personalizada
         public static string DividirALoNorris(this int? dividendo, int? divisor)
         {
             int? resultado = null;
@@ -48,10 +49,10 @@ namespace ExtensionAndExceptionsMethods.Extensions
                 Console.WriteLine($"Mensaje de Error: {(ex.Message)}");
                 Console.WriteLine($"StackTrace: {(ex.StackTrace)}");
             }
-            finally
-            {
-                Console.WriteLine("La operacion finaliza cuando Chuck quiere.");
-            }
+            //finally
+            //{
+            //    Console.WriteLine("La operacion finaliza cuando Chuck quiere.");
+            //}
             return null;
         }
     };
