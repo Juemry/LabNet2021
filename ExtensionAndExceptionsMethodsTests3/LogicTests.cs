@@ -33,5 +33,53 @@ namespace ExtensionAndExceptionsMethods.Exceptions.Tests
             Assert.AreNotEqual(expected, actual);
         }
 
+        [TestMethod()]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void CorroborarMesTest_GetException()
+        {
+            //Arrange 
+            int a = 13;
+            
+            //Act
+            string actual = Logic.CorroborarMes(a);
+            //Assert
+            
+        }
+
+        [TestMethod()]
+        public void CorroborarMesCustomTest_GetMonthRight()
+        {
+            //Arrange 
+            int a = 2;
+            string expected = $"El numero {a} corresponde a Febrero";
+            //Act
+            string actual = Logic.CorroborarMesCustom(a);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod()]
+        public void CorroborarMesCustomTest_GetMonthWrong()
+        {
+            //Arrange 
+            int a = 4;
+            string expected = $"El numero {a} corresponde a Marzo";
+            //Act
+            string actual = Logic.CorroborarMesCustom(a);
+            //Assert
+            Assert.AreNotEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ExtensionAndExceptionsMethods.Exceptions.CustomException))]
+        public void CorroborarMesCustomTest_GetException()
+        {
+            //Arrange 
+            int a = 13;
+
+            //Act
+            string actual = Logic.CorroborarMesCustom(a);
+            //Assert
+
+        }
     }
 }
