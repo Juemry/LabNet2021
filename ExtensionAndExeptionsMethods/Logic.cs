@@ -7,8 +7,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
 {
     public class Logic
     {
-
-
+        //Metodo void llamado Start que llama a los metodos que le dan funcionalidad al programa
         public void Start()
         {
             
@@ -47,9 +46,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
             }
         }
 
-       
-        
-
+        //Switch para seleccionar las distintas opciones del menu
         public void SwitchConMenu(int opc)
         {
 
@@ -66,7 +63,6 @@ namespace ExtensionAndExceptionsMethods.Exceptions
 
             Console.Clear();
 
-            //Switch para seleccionar las distintas opciones del menu
             switch (opc)
             {
                 case 1:
@@ -81,12 +77,9 @@ namespace ExtensionAndExceptionsMethods.Exceptions
                 case 4:
                     Opcion4();
                     break;
-
             }
             Console.ReadLine();
         }
-
-        
 
         public void Opcion1() {
             try
