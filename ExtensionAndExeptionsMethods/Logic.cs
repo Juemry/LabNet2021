@@ -18,7 +18,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
 
                 ImprimirMenu();
 
-                SwitchConMenu(opc);
+                opc = SwitchConMenu(opc);
 
 
             } while (opc != 0);
@@ -47,7 +47,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
         }
 
         //Switch para seleccionar las distintas opciones del menu
-        public void SwitchConMenu(int opc)
+        public int SwitchConMenu(int opc)
         {
 
             {
@@ -79,6 +79,7 @@ namespace ExtensionAndExceptionsMethods.Exceptions
                     break;
             }
             Console.ReadLine();
+            return opc;
         }
 
         public void Opcion1() {
