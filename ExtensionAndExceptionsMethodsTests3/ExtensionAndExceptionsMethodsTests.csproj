@@ -4,6 +4,8 @@
     <TargetFramework>.NETCoreApp,Version=v3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +17,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ExtensionAndExeptionsMethods\ExtensionAndExceptionsMethods.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
