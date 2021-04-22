@@ -19,8 +19,7 @@ namespace POO01
 		}
 
 		//Metodos abstractos pedidos por la consigna
-		public abstract string Informar();
-
+	
 		public abstract string Avanzar();
 
 		public abstract string Detenerse();
@@ -35,6 +34,5 @@ namespace POO01
 		{
 			return nroTransporte;
 		}
-
-	}
+    }
 }
